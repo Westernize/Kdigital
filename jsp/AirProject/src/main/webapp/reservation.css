@@ -1,0 +1,94 @@
+/* Body 전체 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 카드 컨테이너 스타일 */
+.reservation-container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* 제목 스타일 */
+.reservation-container h2 {
+    margin-bottom: 30px;
+    color: #1b3b5f;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Label 스타일 */
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+/* Input, Select 스타일 */
+select, input[type="date"], input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1.5px solid #ddd;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus, input[type="date"]:focus, input[type="text"]:focus {
+    border-color: #1b3b5f;
+    box-shadow: 0 0 8px rgba(27, 59, 95, 0.2);
+}
+
+/* 버튼 스타일 */
+.btn-submit {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #1b3b5f, #246b45);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(90deg, #246b45, #1b3b5f);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Placeholder 스타일 */
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* 작은 화면 반응형 */
+@media screen and (max-width: 480px) {
+    .reservation-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

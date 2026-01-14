@@ -1,0 +1,66 @@
+package ch10;
+
+import java.util.Scanner;
+
+class Ramyon{
+	String ramyon = "라면";
+	String water = "물";
+	String onion = "파";
+	void boilwater() {
+		System.out.println(water + "을 끓인다.");
+	}
+	void cooking() {
+		System.out.println(ramyon + "과 " + onion + "를 넣고 끓여 요리완성. 맛있게 드세요!!!");
+	} 
+}
+
+class RiceRamyon extends Ramyon {
+	String toop = "떡";
+	void topping() {
+		System.out.println(toop + "을 넣는다.");
+	}
+}
+
+class CheseRamyon extends Ramyon {
+	String toop = "치즈";
+	void topping() {
+		System.out.println(toop + "를 넣는다.");
+	}
+}
+
+public class RamyonTest {
+	public static void main(String[] args) {
+		int s;
+		do {
+			System.out.println("만들고 싶은 요리를 입력하세요(1:일반라면, 2:떡라면, 3:치즈라면, 99:종료):");
+			Scanner stdin = new Scanner(System.in);
+			s = stdin.nextInt();
+			if( s == 1 ) {
+				Ramyon r = new Ramyon ();
+				r.boilwater();
+				r.cooking();
+			}
+			else if (s == 2)
+			{
+				RiceRamyon rr = new RiceRamyon();
+				rr.boilwater();
+				rr.topping();
+				rr.cooking();
+				
+				
+			}
+			else if (s == 3) {
+				CheseRamyon cr = new CheseRamyon();
+				cr.boilwater();
+				cr.topping();
+				cr.cooking();
+			}
+		}while (s != 99); {
+			System.out.println("감사합니다.");
+		}
+		
+	
+
+	}
+
+}
